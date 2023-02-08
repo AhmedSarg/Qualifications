@@ -5,14 +5,14 @@
 using namespace std;
 
 int main() {
-	int n;
+	ll n;
 	cin >> n;
 	ll* arr = new ll[n];
-	for (int i = 0; i < n; i++)
+	for (ll i = 0; i < n; i++)
 		cin >> arr[i];
-	int res = 1;
-	for (int i = 1; i < n; i++)
-		if (arr[i] - arr[i - 1] != 1)
+	ll res = 1;
+	for (ll i = 1; i < n; i++)
+		if (arr[i] - arr[i - 1] > 1)
 			res++;
 	cout << res;
 }

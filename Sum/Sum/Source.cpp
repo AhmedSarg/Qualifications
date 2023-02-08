@@ -17,7 +17,7 @@ int main() {
 		ll n;
 		cin >> n;
 		ll sum = 0;
-		for (int i = 1; i <= n; i++) {
+		for (ll i = 1; i <= n; i++) {
 			if (fmod(log2(i), 1.0) == 0)
 				sum -= i;
 			else
