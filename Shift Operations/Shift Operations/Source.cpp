@@ -10,18 +10,13 @@ int main() {
 	ll ssz = s.size();
 	ll tsz = t.size();
 	bool eq = true;
-	if (ssz != tsz) {
-		cout << "NO";
+	if (ssz == tsz && ssz == 1) {
+		cout << "YES";
 		return 0;
 	}
-	ll k = LLONG_MIN;
-	for (int i = 0; i < ssz; i++) {
-		if (k == LLONG_MIN)
-			k = (int)s[0] - (int)t[0];
-		else {
-			if ((int)s[i] - (int)t[i] != k)
-				eq = false;
-		}
+	for (int i = 1; i < ssz; i++) {
+		if ((int)s[i] - (int)t[i] != (int)s[i - 1] - (int)t[i - 1])
+			eq = false;
 	}
 	if (eq)
 		cout << "YES";
